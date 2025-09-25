@@ -1,0 +1,118 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <!-- Card -->
+        <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-header bg-dark text-white text-center rounded-top-4">
+            <h3 class="mb-0">Create a New Listing</h3>
+          </div>
+
+          <div class="card-body p-4">
+            <form
+              method="POST"
+              action="/listings"
+              novalidate
+              class="needs-validation"
+            >
+              <!-- Title -->
+              <div class="mb-3">
+                <label for="title" class="form-label fw-bold">Title</label>
+                <input
+                  name="listing[title]"
+                  id="title"
+                  placeholder="Enter title"
+                  type="text"
+                  class="form-control"
+                />
+                <div class="valid-feedback">✅ Title Looks Good!</div>
+              </div>
+
+              <!-- Description -->
+              <div class="mb-3">
+                <label for="description" class="form-label fw-bold"
+                  >Description</label
+                >
+                <textarea
+                  name="listing[description]"
+                  id="description"
+                  rows="3"
+                  class="form-control"
+                  placeholder="Enter description"
+                ></textarea>
+              </div>
+
+              <!-- Image -->
+              <div class="mb-3">
+                <label for="image" class="form-label fw-bold">Image Link</label>
+                <input
+                  name="listing[image]"
+                  id="image"
+                  placeholder="Paste image URL"
+                  type="text"
+                  class="form-control"
+                />
+
+                <div class="invalid-feedback">⚠️ Please enter a URL!</div>
+              </div>
+
+              <!-- Price + Country -->
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <label for="price" class="form-label fw-bold">Price</label>
+                  <input
+                    name="listing[price]"
+                    id="price"
+                    placeholder="Enter price"
+                    class="form-control"
+                  />
+                  <div class="invalid-feedback">
+                    ⚠️ Please enter a valid price!
+                  </div>
+                </div>
+
+                <div class="mb-3 col-md-6">
+                  <label for="country" class="form-label fw-bold"
+                    >Country</label
+                  >
+                  <input
+                    name="listing[country]"
+                    id="country"
+                    placeholder="Enter country"
+                    type="text"
+                    class="form-control"
+                  />
+                  <div class="invalid-feedback">⚠️ Please enter a country!</div>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="mb-3">
+                <label for="location" class="form-label fw-bold"
+                  >Location</label
+                >
+                <input
+                  name="listing[location]"
+                  id="location"
+                  placeholder="Enter location"
+                  type="text"
+                  class="form-control"
+                />
+                <div class="invalid-feedback">⚠️ Please enter a location!</div>
+              </div>
+
+              <!-- Button -->
+              <div class="d-grid">
+                <button class="btn btn-dark btn-lg rounded-pill shadow-sm">
+                  ➕ Add Listing
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+    </div>
+  </div>
+</body>
