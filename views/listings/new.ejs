@@ -44,17 +44,17 @@
               </div>
 
               <!-- Image -->
-              <div class="mb-3">
-                <label for="image" class="form-label fw-bold">Image Link</label>
+              <div class="col-12">
+                <label for="image" class="form-label fw-bold">Image URL</label>
                 <input
-                  name="listing[image]"
-                  id="image"
-                  placeholder="Paste image URL"
                   type="text"
+                  id="image"
+                  name="listing[image][url]"
+                  placeholder="Enter image URL"
                   class="form-control"
+                  required
                 />
-
-                <div class="invalid-feedback">⚠️ Please enter a URL!</div>
+                <div class="invalid-feedback">⚠️ Image URL is required.</div>
               </div>
 
               <!-- Price + Country -->
@@ -111,7 +111,6 @@
             </form>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
